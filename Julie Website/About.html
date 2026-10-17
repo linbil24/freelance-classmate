@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Jullie Libradilla Ybanez - A Future Web Developer">
+    <title>My Webpage Page | About</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-left">
+            <img src="Image/logo.png" alt="Jullie Libradilla Ybanez" class="header-logo">
+            <div class="header-info">
+                <span class="header-name">Jullie Libradilla Ybanez</span>
+                <span class="header-subtitle">Project Website</span>
+            </div>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="About.html" class="active">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="about-section">
+            <div class="about-left">
+                <h1>My Name is <span>Jullie Libradilla Ybanez</span></h1>
+                <h2>A <span>Future Webdeveloper</span></h2>
+                <p>
+                    I Want to be too the future developer in the future to my approved to
+                    to my skiils and more learns about programming languange
+                    Javascript and Ruby and like to volley ball sports and
+                    i want to join the part of the team and bootcamp
+                    I need money to survive and to support my family.
+                </p>
+                <a href="index.html" class="btn">BACK</a>
+            </div>
+            <div class="about-center">
+                <img src="Image/logo.png" alt="Jullie Libradilla Ybanez" class="about-photo">
+            </div>
+            <div class="about-right">
+                <button class="about-tab" onclick="showTab('skills')" id="tab-skills">SKILLS</button>
+                <button class="about-tab" onclick="showTab('education')" id="tab-education">EDUCATION</button>
+                <button class="about-tab" onclick="showTab('experience')" id="tab-experience">EXPERIENCE</button>
+
+                <div class="about-tab-content" id="content-skills">
+                    <h3>Skills</h3>
+                    <ul>
+                        <li>HTML & CSS</li>
+                        <li>Javascript</li>
+                        <li>Ruby</li>
+                        <li>Web Development</li>
+                        <li>Problem Solving</li>
+                    </ul>
+                </div>
+                <div class="about-tab-content" id="content-education">
+                    <h3>Education</h3>
+                    <ul>
+                        <li>BSIT - Bachelor of Science in Information Technology</li>
+                        <li>Section: 21023</li>
+                        <li>Student No: 22016819</li>
+                    </ul>
+                </div>
+                <div class="about-tab-content" id="content-experience">
+                    <h3>Experience</h3>
+                    <ul>
+                        <li>IT Elective 1 - Web Development</li>
+                        <li>Programming Projects</li>
+                        <li>Volleyball Sports Team</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Create by Design by 2023 : Celestre, Linbil Impuesto</p>
+    </footer>
+
+    <script>
+        function showTab(tab) {
+            // Remove active from all tabs and content
+            document.querySelectorAll('.about-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.about-tab-content').forEach(c => c.classList.remove('active'));
+
+            // Add active to clicked tab and its content
+            document.getElementById('tab-' + tab).classList.add('active');
+            document.getElementById('content-' + tab).classList.add('active');
+        }
+    </script>
+</body>
+</html>

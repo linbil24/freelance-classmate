@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./Css/index.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img class="logo-img" src="./img/pictures.png" alt="Cris john T. Tanedo" width="75" height="75">
+        <div class="content-name-logo">
+            <h1 class="title-logo">Cris john T. Tanedo</h1>
+            <p class="title-logo1">Project Website</p>
+            </div>
+        </div>
+        <ul class="active-ul">
+            <li class="active-li"><a class="active-a" href="./index.html">HOME</a></li>
+            <li class="active-li"><a class="active-a" href="./about.html">ABOUT</a></li>
+            <li class="active-li"><a class="active-a" href="./portfolio.html">PORTFOLIO</a></li>
+            <li class="active-li"><a class="active-a active" href="./gallery.html">GALLERY</a></li>
+            <li class="active-li"><a class="active-a" href="./contact.html">CONTACT</a></li>
+        </ul>
+    </header>
+
+    <main class="gallery-main">
+        <div class="gallery-wrapper">
+            <div class="gallery-header">
+                <h1 class="gallery-title">Photo & Video Gallery</h1>
+                <p class="gallery-subtitle">Explore project photos and computer laboratory video presentations</p>
+            </div>
+
+            <!-- Photos Section -->
+            <div class="gallery-section">
+                <div class="gallery-section-heading">
+                    <h2><i class="bi bi-images"></i> Photo Collection</h2>
+                    <span>Click any image to view in full resolution</span>
+                </div>
+                <div class="gallery-photos-grid">
+                    <div class="gallery-card" data-img="./img/img1.jpg" data-title="Laboratory Photo 1">
+                        <div class="gallery-img-wrapper">
+                            <img class="gallery-img" src="./img/img1.jpg" alt="Laboratory Photo 1">
+                            <div class="gallery-overlay">
+                                <span class="gallery-badge"><i class="bi bi-image"></i> Photo 1</span>
+                                <span class="gallery-view-hint"><i class="bi bi-arrows-fullscreen"></i> View</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card" data-img="./img/img2.jpg" data-title="Laboratory Photo 2">
+                        <div class="gallery-img-wrapper">
+                            <img class="gallery-img" src="./img/img2.jpg" alt="Laboratory Photo 2">
+                            <div class="gallery-overlay">
+                                <span class="gallery-badge"><i class="bi bi-image"></i> Photo 2</span>
+                                <span class="gallery-view-hint"><i class="bi bi-arrows-fullscreen"></i> View</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card" data-img="./img/pictures.png" data-title="Project Photo 3">
+                        <div class="gallery-img-wrapper">
+                            <img class="gallery-img" src="./img/pictures.png" alt="Project Photo 3">
+                            <div class="gallery-overlay">
+                                <span class="gallery-badge"><i class="bi bi-image"></i> Photo 3</span>
+                                <span class="gallery-view-hint"><i class="bi bi-arrows-fullscreen"></i> View</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Videos Section -->
+            <div class="gallery-section">
+                <div class="gallery-section-heading">
+                    <h2><i class="bi bi-camera-reels"></i> Video Memories</h2>
+                    <span>Watch laboratory demonstration recordings</span>
+                </div>
+                <div class="gallery-videos-grid">
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <video class="gallery-video" src="./video/video1.mp4" controls preload="metadata"></video>
+                        </div>
+                        <div class="video-info">
+                            <span class="video-badge"><i class="bi bi-play-circle"></i> Video 1</span>
+                            <span class="video-title">Video Memories</span>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <video class="gallery-video" src="./video/video2.mp4" controls preload="metadata"></video>
+                        </div>
+                        <div class="video-info">
+                            <span class="video-badge"><i class="bi bi-play-circle"></i> Video 2</span>
+                            <span class="video-title">Video Memories</span>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <video class="gallery-video" src="./video/vide3.mp4" controls preload="metadata"></video>
+                        </div>
+                        <div class="video-info">
+                            <span class="video-badge"><i class="bi bi-play-circle"></i> Video 3</span>
+                            <span class="video-title">Video Memories</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Image Lightbox Modal for Gallery Photos -->
+    <div id="imageModal" class="image-modal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle" class="modal-title">Photo View</h3>
+                <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-img-wrapper">
+                <img id="modalImg" class="modal-img" src="" alt="Full Photo View">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p class="footer-copyright">Copyright &copy; 2023 Designed by: <span>Cris john T. Tanedo</span></p>
+    </footer>
+
+    <script>
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImg');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalClose = document.getElementById('modalClose');
+        const modalBackdrop = document.getElementById('modalBackdrop');
+        const cards = document.querySelectorAll('.gallery-card');
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                const imgSrc = card.getAttribute('data-img');
+                const title = card.getAttribute('data-title');
+                modalImg.src = imgSrc;
+                modalImg.alt = title;
+                modalTitle.textContent = title;
+                modal.classList.add('active');
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        function closeModal() {
+            modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        modalClose.addEventListener('click', closeModal);
+        modalBackdrop.addEventListener('click', closeModal);
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website Page | Gallery</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="Image/logo.png" alt="Logo" class="nav-logo">
+            <div class="logo-text">
+                <span class="brand-name">DIZON CHIEMMELYN</span>
+                <p class="brand-logo">Project Website</p>
+            </div>
+        </a>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="portfolio.html">PORTFOLIO</a>
+            <a href="Gallery.html" class="active">GALLERY</a>
+            <a href="Contact.html">CONTACT</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="page-title">PHOTO & VIDEO GALLERY</h1>
+        <p class="gallery-subtitle">Explore project photos and video memories</p>
+
+        <!-- Photo Collection Section -->
+        <div class="gallery-section">
+            <div class="gallery-section-header">
+                <h2 class="gallery-section-title">📷 Photo Collection</h2>
+                <span class="gallery-section-hint">Click any image to view in full resolution</span>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-card" onclick="this.classList.toggle('revealed')">
+                    <div class="gallery-card-img-wrap">
+                        <img src="Image/image 6.png" alt="Photo 1">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-view-btn">🔍 View</span>
+                        </div>
+                    </div>
+                    <div class="gallery-card-label">📷 Photo 1</div>
+                </div>
+                <div class="gallery-card" onclick="this.classList.toggle('revealed')">
+                    <div class="gallery-card-img-wrap">
+                        <img src="Image/image 7.png" alt="Photo 2">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-view-btn">🔍 View</span>
+                        </div>
+                    </div>
+                    <div class="gallery-card-label">📷 Photo 2</div>
+                </div>
+                <div class="gallery-card" onclick="this.classList.toggle('revealed')">
+                    <div class="gallery-card-img-wrap">
+                        <img src="Image/image 9.png" alt="Photo 3">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-view-btn">🔍 View</span>
+                        </div>
+                    </div>
+                    <div class="gallery-card-label">📷 Photo 3</div>
+                </div>
+                <div class="gallery-card" onclick="this.classList.toggle('revealed')">
+                    <div class="gallery-card-img-wrap">
+                        <img src="Image/image 8.png" alt="Photo 4">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-view-btn">🔍 View</span>
+                        </div>
+                    </div>
+                    <div class="gallery-card-label">📷 Photo 4</div>
+                </div>
+                <div class="gallery-card" onclick="this.classList.toggle('revealed')">
+                    <div class="gallery-card-img-wrap">
+                        <img src="Image/image 10.png" alt="Photo 5">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-view-btn">🔍 View</span>
+                        </div>
+                    </div>
+                    <div class="gallery-card-label">📷 Photo 5</div>
+                </div>
+                <div class="gallery-card" onclick="this.classList.toggle('revealed')">
+                    <div class="gallery-card-img-wrap">
+                        <img src="Image/image 1.png" alt="Photo 6">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-view-btn">🔍 View</span>
+                        </div>
+                    </div>
+                    <div class="gallery-card-label">📷 Photo 6</div>
+                </div>
+                <div class="gallery-card" onclick="this.classList.toggle('revealed')">
+                    <div class="gallery-card-img-wrap">
+                        <img src="Image/image 2.png" alt="Photo 7">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-view-btn">🔍 View</span>
+                        </div>
+                    </div>
+                    <div class="gallery-card-label">📷 Photo 7</div>
+                </div>
+                <div class="gallery-card" onclick="this.classList.toggle('revealed')">
+                    <div class="gallery-card-img-wrap">
+                        <img src="Image/image 3.png" alt="Photo 8">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-view-btn">🔍 View</span>
+                        </div>
+                    </div>
+                    <div class="gallery-card-label">📷 Photo 8</div>
+                </div>
+                <div class="gallery-card" onclick="this.classList.toggle('revealed')">
+                    <div class="gallery-card-img-wrap">
+                        <img src="Image/Image 4.png" alt="Photo 9">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-view-btn">🔍 View</span>
+                        </div>
+                    </div>
+                    <div class="gallery-card-label">📷 Photo 9</div>
+                </div>
+                <div class="gallery-card" onclick="this.classList.toggle('revealed')">
+                    <div class="gallery-card-img-wrap">
+                        <img src="Image/image 5.png" alt="Photo 10">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-view-btn">🔍 View</span>
+                        </div>
+                    </div>
+                    <div class="gallery-card-label">📷 Photo 10</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video Memories Section -->
+        <div class="gallery-section">
+            <div class="gallery-section-header">
+                <h2 class="gallery-section-title">🎬 Video Memories</h2>
+                <span class="gallery-section-hint">Watch laboratory demonstration recordings</span>
+            </div>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="Image/image 6.png" alt="Video 1">
+                        <div class="video-play-btn">▶</div>
+                    </div>
+                    <div class="video-card-label">🎬 Video 1</div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="Image/image 7.png" alt="Video 2">
+                        <div class="video-play-btn">▶</div>
+                    </div>
+                    <div class="video-card-label">🎬 Video 2</div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="Image/image 3.png" alt="Video 3">
+                        <div class="video-play-btn">▶</div>
+                    </div>
+                    <div class="video-card-label">🎬 Video 3</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Create by Design by 2023 : Celestre, Linbil Impuesto</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Webpage Page | About</title>
+    <link rel="stylesheet" href="./Css/index.css">
+</head>
+<body class="about-page">
+    <header>
+        <nav class="header-1">
+            <a href="index.html" class="header-brand">
+                <img src="./profile.jpg" alt="Logo" class="brand-logo-img">
+                <div class="brand-text">
+                    <span class="brand-name">UCHI JOHN PATRICK</span>
+                    <span class="brand-sub">PROJECT WEBSITE</span>
+                </div>
+            </a>
+            <ul class="header-ul">
+                <li class="header-li"><a class="header-a" href="index.html">HOME</a></li>
+                <li class="header-li"><a class="header-a" href="portfolio.html">PORTFOLIO</a></li>
+                <li class="header-li"><a class="header-a" href="gallery.html">GALLERY</a></li>
+                <li class="header-li"><a class="header-a" href="about.html">ABOUT</a></li>
+                <li class="header-li"><a class="header-a" href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="about-main">
+        <div class="simple-layout-container">
+            <div class="about-text-col">
+                <h1 class="about-heading">ABOUT ME</h1>
+                <p class="about-bio">
+                    Hello! I'm John Patrick, and I'm delighted to welcome you to my corner of the web.<br>
+                    As a passionate BSIT student and web developer, I've dedicated my time to exploring,<br>
+                    learning, and sharing my knowledge with others.<br>
+                    Thank you for being a part of this journey with me.<br>
+                    Let's explore, learn, and grow together.
+                </p>
+
+                <div class="about-tabs-nav">
+                    <button class="about-tab-btn active" onclick="switchAboutTab('skills')">Skills</button>
+                    <button class="about-tab-btn" onclick="switchAboutTab('experience')">Experience</button>
+                    <button class="about-tab-btn" onclick="switchAboutTab('education')">Education</button>
+                </div>
+
+                <div id="tab-skills" class="about-tab-panel active">
+                    <ul class="tab-list">
+                        <li><strong>Web Development:</strong> HTML5, CSS3, JavaScript</li>
+                        <li><strong>UI / Design:</strong> Responsive layouts, Simple clean UI</li>
+                        <li><strong>IT Fundamentals:</strong> Computer hardware & troubleshooting</li>
+                    </ul>
+                </div>
+
+                <div id="tab-experience" class="about-tab-panel">
+                    <ul class="tab-list">
+                        <li><strong>2023 - Present:</strong> BSIT Academic Projects & Activities (BCP)</li>
+                        <li><strong>Web Projects:</strong> Portfolio website, Media integration & Lab outputs</li>
+                    </ul>
+                </div>
+
+                <div id="tab-education" class="about-tab-panel">
+                    <ul class="tab-list">
+                        <li><strong>College:</strong> Bestlink College of the Philippines (BCP)</li>
+                        <li><strong>Program:</strong> Bachelor of Science in Information Technology (BSIT)</li>
+                        <li><strong>Age:</strong> 20 years old</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="simple-photo-wrapper">
+                <img src="./profile.jpg" alt="John Patrick Uchi" class="simple-circle-photo">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>Copyright &copy;2023 Designed by <span class="designer">Uchi John Patrick </span></p>
+        </div>
+    </footer>
+
+    <script>
+        function switchAboutTab(tabName) {
+            document.querySelectorAll('.about-tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.about-tab-panel').forEach(panel => panel.classList.remove('active'));
+            
+            const btns = Array.from(document.querySelectorAll('.about-tab-btn'));
+            const selectedBtn = btns.find(b => b.textContent.trim().toLowerCase() === tabName);
+            if (selectedBtn) selectedBtn.classList.add('active');
+            
+            const targetPanel = document.getElementById('tab-' + tabName);
+            if (targetPanel) targetPanel.classList.add('active');
+        }
+    </script>
+</body>
+</html>

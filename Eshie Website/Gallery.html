@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website Page | Gallery</title>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<!-- this are background-image -->
+<body class="gallery-page">
+    <!-- Here is a header -->
+   <header>
+         <!-- Parent-Container -->
+        <div class="profile-container">
+            <!-- child-Container -->
+            <div class="content-container">
+              <a href="./index.html"><img class="profile-image" src="./Gallery/Logo.jpg" alt=""></a>
+                <div class="profile-text">
+                    <h1 class="title-profile">Princess Eishe A. Binaya</h1>
+                    <p class="subtitle-profile">Project Website</p>
+                </div>
+             </div>
+         </div>
+           <!-- Navigation bars -->
+         <div class="Selection-container"> 
+            <div class="Content-selection">
+                <ul class="Selection-ul">
+                    <li class="Selection-li"><a class="Selection-a" href="./portfolio.html">Home</a></li>
+                    <li class="Selection-li"><a class="Selection-a" href="./portfolio.html">Portfolio</a></li>
+                    <li class="Selection-li"><a class="Selection-a" href="./About.html">About</a></li>
+                    <li class="Selection-li"><a class="Selection-a" href="./Gallery.html">Gallery</a></li>
+                    <li class="Selection-li"><a class="Selection-a" href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+         </div>
+   </header>
+
+     <!-- main axis -->
+
+<Main class="Gallery-page">
+          <!-- Content-page -->
+            <div class="content-gallery">
+                <h1 class="title-albums">Gallery Albums</h1>
+            </div>
+
+            <div class="gallery-row">
+
+              <div class="content-me">
+                <h1 class="title-album-me">ME</h1>
+                <div class="images-grid">
+                    <div class="img-hover-wrap" onclick="openModal(this.querySelector('img').src)">
+                        <img class="Self" src="./Gallery/Me1n.jpg" alt="">
+                        <div class="img-hover-overlay"><span>View Image</span></div>
+                    </div>
+                    <div class="img-hover-wrap" onclick="openModal(this.querySelector('img').src)">
+                        <img class="Self" src="./Gallery/Me2n.jpg" alt="">
+                        <div class="img-hover-overlay"><span>View Image</span></div>
+                    </div>
+                    <div class="img-hover-wrap" onclick="openModal(this.querySelector('img').src)">
+                        <img class="Self" src="./Gallery/Me3n.jpg" alt="">
+                        <div class="img-hover-overlay"><span>View Image</span></div>
+                    </div>
+                    <div class="img-hover-wrap" onclick="openModal(this.querySelector('img').src)">
+                        <img class="Self" src="./Gallery/Me4n.jpg" alt="">
+                        <div class="img-hover-overlay"><span>View Image</span></div>
+                    </div>
+                </div>
+              </div>
+
+              <div class="content-me2">
+                <h1 class="title-album-me">Group picture</h1>
+                <div class="images-grid">
+                    <div class="img-hover-wrap" onclick="openModal(this.querySelector('img').src)">
+                        <img class="Self" src="./Gallery/group.jpg" alt="">
+                        <div class="img-hover-overlay"><span>View Image</span></div>
+                    </div>
+                    <div class="img-hover-wrap" onclick="openModal(this.querySelector('img').src)">
+                        <img class="Self" src="./gallery/group2.jpg" alt="">
+                        <div class="img-hover-overlay"><span>View Image</span></div>
+                    </div>
+                    <div class="img-hover-wrap" onclick="openModal(this.querySelector('img').src)">
+                        <img class="Self" src="./gallery/group3.jpg" alt="">
+                        <div class="img-hover-overlay"><span>View Image</span></div>
+                    </div>
+                    <div class="img-hover-wrap" onclick="openModal(this.querySelector('img').src)">
+                        <img class="Self" src="./gallery/group4.jpg" alt="">
+                        <div class="img-hover-overlay"><span>View Image</span></div>
+                    </div>
+                </div>
+              </div>
+
+              <div class="content-me3">
+                <h1 class="title-album-me">Pets</h1>
+                <div class="images-grid">
+                    <div class="img-hover-wrap" onclick="openModal(this.querySelector('img').src)">
+                        <img class="Self" src="./Gallery/pet1.jpg" alt="">
+                        <div class="img-hover-overlay"><span>View Image</span></div>
+                    </div>
+                    <div class="img-hover-wrap" onclick="openModal(this.querySelector('img').src)">
+                        <img class="Self" src="./Gallery/pet2.jpg" alt="">
+                        <div class="img-hover-overlay"><span>View Image</span></div>
+                    </div>
+                    <div class="img-hover-wrap" onclick="openModal(this.querySelector('img').src)">
+                        <img class="Self" src="./Gallery/pet3.jpg" alt="">
+                        <div class="img-hover-overlay"><span>View Image</span></div>
+                    </div>
+                    <div class="img-hover-wrap" onclick="openModal(this.querySelector('img').src)">
+                        <img class="Self" src="./Gallery/pet4.jpg" alt="">
+                        <div class="img-hover-overlay"><span>View Image</span></div>
+                    </div>
+                </div>
+              </div>
+
+            </div>
+
+ </Main>
+
+<!-- Lightbox Modal -->
+<div id="imgModal" class="img-modal" onclick="closeModal()">
+    <span class="img-modal-close">&times;</span>
+    <img id="imgModalContent" class="img-modal-img" src="" alt="">
+</div>
+
+<!-- Footer Axis -->
+ <Footer>
+         <!-- footer -->
+       <div class="container-copyright">
+            <div class="txt-copyright">
+                <h1 class="copyright"> Copyright &copy; 2023 Designed by: Celestre, Linbil Impuesto</h1>
+            </div>
+        </div>
+ </Footer>
+
+<script>
+    function openModal(src) {
+        document.getElementById('imgModal').style.display = 'flex';
+        document.getElementById('imgModalContent').src = src;
+    }
+    function closeModal() {
+        document.getElementById('imgModal').style.display = 'none';
+    }
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeModal();
+    });
+</script>
+
+</body>
+</html>

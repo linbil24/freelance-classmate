@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Webpage Page | Gallery</title>
+    <link rel="stylesheet" href="./Css/index.css">
+</head>
+<body>
+    <header>
+        <nav class="header-1">
+            <a href="index.html" class="header-brand">
+                <img src="./profile.jpg" alt="Logo" class="brand-logo-img">
+                <div class="brand-text">
+                    <span class="brand-name">UCHI JOHN PATRICK</span>
+                    <span class="brand-sub">PROJECT WEBSITE</span>
+                </div>
+            </a>
+            <ul class="header-ul">
+                <li class="header-li"><a class="header-a" href="index.html">HOME</a></li>
+                <li class="header-li"><a class="header-a" href="portfolio.html">PORTFOLIO</a></li>
+                <li class="header-li"><a class="header-a" href="gallery.html">GALLERY</a></li>
+                <li class="header-li"><a class="header-a" href="about.html">ABOUT</a></li>
+                <li class="header-li"><a class="header-a" href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="center">
+            <h1 class="title-h1">Old video uploaded </h1>
+            <video class="videos" controls src="./Video/uchi.mp4"></video>
+           
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>Copyright &copy;2023 Designed by <span class="designer">Uchi John Patrick </span></p>
+        </div>
+    </footer>
+
+    <script>
+        const video = document.querySelector('.videos');
+        if (video) {
+            video.addEventListener('play', () => video.classList.add('playing'));
+            video.addEventListener('pause', () => video.classList.remove('playing'));
+        }
+    </script>
+</body>
+</html>

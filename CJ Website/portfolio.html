@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./Css/index.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img class="logo-img" src="./img/pictures.png" alt="Cris john T. Tanedo" width="75" height="75">
+            <div class="content-name-logo">
+                <h1 class="title-logo">Cris john T. Tanedo</h1>
+                <p class="title-logo1">Project Website</p>
+            </div>
+        </div>
+        <ul class="active-ul">
+            <li class="active-li"><a class="active-a" href="./index.html">HOME</a></li>
+            <li class="active-li"><a class="active-a" href="./about.html">ABOUT</a></li>
+            <li class="active-li"><a class="active-a" href="./portfolio.html">PORTFOLIO</a></li>
+            <li class="active-li"><a class="active-a" href="./gallery.html">GALLERY</a></li>
+            <li class="active-li"><a class="active-a" href="./contact.html">CONTACT</a></li>
+        </ul>
+    </header>
+
+    <main class="portfolio-main">
+        <div class="portfolio-wrapper">
+            <div class="portfolio-header">
+                <h1 class="portfolio-title">Activities for Computer Laboratory</h1>
+                <p class="portfolio-subtitle">Hover on an activity to reveal &bull; Click to view full image</p>
+            </div>
+
+            <div class="portfolio-viewbox">
+                <div class="portfolio-grid">
+                    <div class="activity-card" data-img="./img/act1.png" data-title="Activity 1">
+                        <div class="activity-img-wrapper">
+                            <img class="activity-img" src="./img/act1.png" alt="Activity 1">
+                            <div class="activity-overlay">
+                                <span class="activity-badge">Activity 1</span>
+                                <span class="activity-view-hint"><i class="bi bi-arrows-fullscreen"></i> View</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity-card" data-img="./img/act2.png" data-title="Activity 2">
+                        <div class="activity-img-wrapper">
+                            <img class="activity-img" src="./img/act2.png" alt="Activity 2">
+                            <div class="activity-overlay">
+                                <span class="activity-badge">Activity 2</span>
+                                <span class="activity-view-hint"><i class="bi bi-arrows-fullscreen"></i> View</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity-card" data-img="./img/act3.png" data-title="Activity 3">
+                        <div class="activity-img-wrapper">
+                            <img class="activity-img" src="./img/act3.png" alt="Activity 3">
+                            <div class="activity-overlay">
+                                <span class="activity-badge">Activity 3</span>
+                                <span class="activity-view-hint"><i class="bi bi-arrows-fullscreen"></i> View</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity-card" data-img="./img/act4.png" data-title="Activity 4">
+                        <div class="activity-img-wrapper">
+                            <img class="activity-img" src="./img/act4.png" alt="Activity 4">
+                            <div class="activity-overlay">
+                                <span class="activity-badge">Activity 4</span>
+                                <span class="activity-view-hint"><i class="bi bi-arrows-fullscreen"></i> View</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity-card" data-img="./img/act5.png" data-title="Activity 5">
+                        <div class="activity-img-wrapper">
+                            <img class="activity-img" src="./img/act5.png" alt="Activity 5">
+                            <div class="activity-overlay">
+                                <span class="activity-badge">Activity 5</span>
+                                <span class="activity-view-hint"><i class="bi bi-arrows-fullscreen"></i> View</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity-card" data-img="./img/act6.png" data-title="Activity 6">
+                        <div class="activity-img-wrapper">
+                            <img class="activity-img" src="./img/act6.png" alt="Activity 6">
+                            <div class="activity-overlay">
+                                <span class="activity-badge">Activity 6</span>
+                                <span class="activity-view-hint"><i class="bi bi-arrows-fullscreen"></i> View</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity-card" data-img="./img/act7.png" data-title="Activity 7">
+                        <div class="activity-img-wrapper">
+                            <img class="activity-img" src="./img/act7.png" alt="Activity 7">
+                            <div class="activity-overlay">
+                                <span class="activity-badge">Activity 7</span>
+                                <span class="activity-view-hint"><i class="bi bi-arrows-fullscreen"></i> View</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end portfolio-viewbox -->
+        </div>
+    </main>
+
+    <!-- Image Lightbox Modal for View Image -->
+    <div id="imageModal" class="image-modal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle" class="modal-title">Activity 1</h3>
+                <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-img-wrapper">
+                <img id="modalImg" class="modal-img" src="" alt="Full Activity View">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p class="footer-copyright">Copyright &copy; 2023 Designed by: <span>Cris john T. Tanedo</span></p>
+    </footer>
+
+    <script>
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImg');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalClose = document.getElementById('modalClose');
+        const modalBackdrop = document.getElementById('modalBackdrop');
+        const cards = document.querySelectorAll('.activity-card');
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                const imgSrc = card.getAttribute('data-img');
+                const title = card.getAttribute('data-title');
+                modalImg.src = imgSrc;
+                modalImg.alt = title;
+                modalTitle.textContent = title;
+                modal.classList.add('active');
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        function closeModal() {
+            modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        modalClose.addEventListener('click', closeModal);
+        modalBackdrop.addEventListener('click', closeModal);
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+
+</html>
